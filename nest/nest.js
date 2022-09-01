@@ -219,6 +219,8 @@ const videoContainer = document.getElementById('video-container');
 // If the browser is currently in fullscreen mode,
 // then it should exit and vice versa.
 function toggleFullScreen() {
+  console.log(toggleFullScreen)
+  updateFullscreenButton()
   if (document.fullscreenElement) {
     document.exitFullscreen();
   } else if (document.webkitFullscreenElement) {
@@ -229,6 +231,7 @@ function toggleFullScreen() {
     videoContainer.webkitRequestFullscreen();
   } else {
     videoContainer.requestFullscreen();
+  
   }
 }
 
@@ -239,6 +242,7 @@ const fullscreenIcons = fullscreenButton.querySelectorAll('use');
 // updateFullscreenButton changes the icon of the full screen button
 // and tooltip to reflect the current full screen state of the video
 function updateFullscreenButton() {
+  console.log(fullscreenIcons)
   fullscreenIcons.forEach(icon => icon.classList.toggle('hidden'));
 
   if (document.fullscreenElement) {
@@ -248,7 +252,6 @@ function updateFullscreenButton() {
   }
 }
 
-videoContainer.addEventListener('fullscreenchange', updateFullscreenButton);
 
 // Picture in picture 
 
