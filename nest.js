@@ -1,3 +1,15 @@
+// Sticky navbar
+
+
+window.addEventListener('scroll', function(e){
+  let stickyNavbar = document.querySelector('.navbar-sticky');
+  if (this.window.scrollY < 600) stickyNavbar.classList.remove('visible');
+  else stickyNavbar.classList.add('visible')
+})
+
+
+// Sticky Navbar End
+
 const video = document.getElementById("video");
 const videoControls = document.getElementById("video-controls");
 
