@@ -883,7 +883,6 @@ svg {
     display: none;
   }
   .header-content-flexbox-buttons {
-    padding: 65px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -937,6 +936,6 @@ svg {
   }
   .enterprise-content {
     width: 100%;
-    padding: 70px 0px 70px 0px;
+    padding: 16px 0px 70px 0px;
   }
 }
